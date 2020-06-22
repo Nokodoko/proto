@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "~/proto/prac2/streetImport.proto";
+
+message Street{
+  string street_Name = 1;
+  string city = 2; 
+}
+

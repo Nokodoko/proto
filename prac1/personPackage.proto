@@ -1,0 +1,41 @@
+syntax = "proto3";
+/* Person is used to indentify users
+   across our system
+ */
+
+import "~/proto/dateWPackage.proto";
+package person;
+
+message Person{
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+  bytes small_picture = 4; //represents a small .jpg file
+  bool profile_verified = 5; 
+  float height = 6; //height of person in centimeters
+
+  repeated string phone_numbers = 7;
+
+  enum eyeColor{
+    unknown_eye_color = 0;
+    eye_green = 1;
+    eye_brown = 2;
+    eye_blue = 3;
+  } 
+
+  eyeColor eye_color = 8;
+
+  my.date.Date birthday = 9;
+
+  message address{
+    string address_line_1 = 1;
+    string address_line_2 = 1;
+    string zipcode = 3;
+    string city = 4;
+    string country = 5;
+  }
+  
+  repeated address Addresses = 10;
+
+}
+
