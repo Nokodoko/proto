@@ -2,19 +2,10 @@ syntax = "proto3";
 
 package building;
 
-message City{
-  string name = 1;
-  string zipCode = 2;
-  string Country_Name = 3;
-}
-
-message Street{
-  string street_Name = 1;
-  string city = 2; 
-}
+import "~/proto/prac2/streetImport.proto"
 
 message Building{
   string building_Name = 1;
-  string building_Number = 2;
-  string street = 3;
+  int32 building_Number = 2;
+  street.Street street = 3;
 }

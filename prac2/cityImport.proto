@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-import "~/proto/prac2/cityImport.proto";
-
 message City{
   string name = 1;
   string zipCode = 2;
