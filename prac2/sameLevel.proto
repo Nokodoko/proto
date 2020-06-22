@@ -13,6 +13,6 @@ message Street{
 
 message Building{
   string building_Name = 1;
-  string building_Number = 2;
+  int32 building_Number = 2;
   string street = 3;
 }
