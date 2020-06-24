@@ -1,4 +1,6 @@
-syntax = "proto3"
+syntax = "proto3";
+
+option go_package = "~/proto/prac2/nested.proto";
 
 message Building{
   string building_Name = 1;
